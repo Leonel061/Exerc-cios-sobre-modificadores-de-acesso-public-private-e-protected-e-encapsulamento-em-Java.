@@ -1,0 +1,33 @@
+public class Produto {
+    private String nome;
+    private double preco;
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setPreco(double preco) {
+        if (preco < 0) {
+            System.out.println("Erro: Preço não pode ser negativo.");
+        } else {
+            this.preco = preco;
+        }
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public static void main(String[] args) {
+        Produto produto = new Produto();
+        produto.setNome("Produto B");
+        produto.setPreco(-10.0);  // Vai exibir erro
+        produto.setPreco(150.0);  // Vai atribuir o valor
+        System.out.println("Nome: " + produto.getNome());
+        System.out.println("Preço: " + produto.getPreco());
+    }
+}
