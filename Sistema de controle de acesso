@@ -1,0 +1,23 @@
+public class Porta {
+    private boolean aberta;
+
+    public void abrir() {
+        aberta = true;
+    }
+
+    public void fechar() {
+        aberta = false;
+    }
+
+    public boolean isAberta() {
+        return aberta;
+    }
+
+    public static void main(String[] args) {
+        Porta porta = new Porta();
+        porta.abrir();
+        System.out.println("Porta aberta: " + porta.isAberta());
+        porta.fechar();
+        System.out.println("Porta aberta: " + porta.isAberta());
+    }
+}
