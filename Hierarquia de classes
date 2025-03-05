@@ -1,0 +1,22 @@
+public class Veiculo {
+    protected int velocidadeMaxima;
+
+    public Veiculo(int velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+}
+
+public class Carro extends Veiculo {
+    public Carro(int velocidadeMaxima) {
+        super(velocidadeMaxima);
+    }
+
+    public void exibirVelocidadeMaxima() {
+        System.out.println("Velocidade Máxima do Carro: " + velocidadeMaxima);
+    }
+
+    public static void main(String[] args) {
+        Carro carro = new Carro(180);
+        carro.exibirVelocidadeMaxima();
+    }
+}
