@@ -1,0 +1,43 @@
+public class Carro {
+    private String marca;
+    private String modelo;
+    public int ano;
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setAno(int ano) {
+        if (ano >= 1886) {  // Ano do primeiro automóvel
+            this.ano = ano;
+        } else {
+            System.out.println("Erro: Ano inválido!");
+        }
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public static void main(String[] args) {
+        Carro carro = new Carro();
+        carro.setMarca("Toyota");
+        carro.setModelo("Corolla");
+        carro.setAno(2020);
+        System.out.println("Marca: " + carro.getMarca());
+        System.out.println("Modelo: " + carro.getModelo());
+        System.out.println("Ano: " + carro.getAno());
+    }
+}
