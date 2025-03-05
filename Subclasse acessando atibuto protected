@@ -1,0 +1,23 @@
+public class Pessoa {
+    protected int idade;
+
+    public Pessoa(int idade) {
+        this.idade = idade;
+    }
+}
+
+public class Aluno extends Pessoa {
+
+    public Aluno(int idade) {
+        super(idade);
+    }
+
+    public void exibirIdade() {
+        System.out.println("Idade do aluno: " + idade);
+    }
+
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno(20);
+        aluno.exibirIdade();
+    }
+}
