@@ -1,0 +1,27 @@
+public class Animal {
+    protected void fazerSom() {
+        System.out.println("Som do animal");
+    }
+}
+
+public class Cachorro extends Animal {
+    @Override
+    protected void fazerSom() {
+        System.out.println("Latido");
+    }
+}
+
+public class Gato extends Animal {
+    @Override
+    protected void fazerSom() {
+        System.out.println("Miau");
+    }
+
+    public static void main(String[] args) {
+        Cachorro cachorro = new Cachorro();
+        cachorro.fazerSom();
+        
+        Gato gato = new Gato();
+        gato.fazerSom();
+    }
+}
